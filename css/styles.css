@@ -1,0 +1,85 @@
+/* Body style */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ff007f;
+    text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px #ff007f;
+}
+
+p, ul {
+    background-color: #c4c4c480;
+    padding: 16px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #292929;
+    border: 1px solid #ff007f;
+    margin: 5px 0;
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #ff007f;
+    color: #121212;
+}
+
+/* Purple background for navigation bar */
+.navbar {
+    background-color: #1e1e1e;
+    overflow: hidden;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.navbar a {
+    float: center;
+    color: #adadad;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: large;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff007f;
+}
+
+.navbar a:active {
+    color: #00fff7;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #1e1e1e;
+    color: #adadad;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}

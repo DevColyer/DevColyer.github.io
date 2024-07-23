@@ -4,54 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Devin Colyer">
-    <meta name="description" content="This is my profile for Sparta Glibal">
+    <meta name="description" content="Devin Colyer's Spartan Profile">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="profile.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Devin Colyer</title>
 </head>
 
 <body>
-    <nav>
-        <a href="index.html">Go to profile</a>
-        <a href="projects.html">Go to projects</a>
-        <a href="https://www.linkedin.com/in/devcolyer/" target="_blank">My LinkedIn</a>
-    </nav>
+    <div class="navbar">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </div>
 
-    <header>
-        <h1>Devin Colyer</h1>
-        <h2>My Profile</h2>
-        <img alt="Profile picture of Devin Colyer" src="images/profilepic.jpg" width="200px">
-    </header>
+    <section id="home">
+        <h1>Welcome to My Profile</h1>
+        <p>Discover my work and experience in software development.</p>
+    </section>
 
-    <section>
-        <h4>My Hobbies</h4>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>A brief introduction about your professional background and skills.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
         <ul>
-            <li>Reading</li>
-            <li>Magic the Gathering</li>
-            <li>Motorcycling</li>
+            <li>Agile, Scrum, and similar practices</li>
+            <li>Java, Spring JPA</li>
+            <li>Source Control, Git, Bash</li>
+            <li>C/C++, C#</li>
+            <li>Unit Testing, Optimisiation, Debugging</li>
+            <li>HTML5, CSS, PHP, SQL</li>
+            <li>Leadership, Communication, Teamwork</li>
         </ul>
     </section>
 
-    <section>
-        <h4>My Goals</h4>
-        <ol>
-            <li>Financial Freedom</li>
-            <li>Become a developer</li>
-            <li>To havea house and family</li>
-        </ol>
+    <section id="passions">
+        <h2>Passions</h2>
+        <ul>
+            <li>Writing and listening to metal, folk and prog music as well as other genres</li>
+            <li>Enjoy various forms of gaming including favourites like Dark Souls, Magic the Gathering, and Vampire:
+                The Masquerade</li>
+            <li>Active Participant in game jams, creating unique and entertaining experiences such as a 2D comedy
+                Sims-clone called "Abertay Game Jam Manager 2023"</li>
+            <li>Avid reader of aithors such as William Gibson, Kentaro Miura, Junji Ito, and Philip K. Dick</li>
+            <li>Motorcycle enthusiast including ownership of a Yamaha YBR125, and a gorgeous black and gold Honda CBR600
+            </li>
+            <li>Love preparing meals and pairing the with cocktails and finishing with barista quality coffees</li>
+        </ul>
     </section>
 
-    <section>
-        <h3>Search for news</h3>
-        <form action="https://www.bbc.co.uk/search">
-            <label for="mysearch">Search for:</label>
-            <input id="mysearch" name="q" type="text" value="perth">
-            <input class="button" type="submit" value="Submit">
-        </form>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p>A showcase of your projects and achievements.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Get in touch with me through these platforms.</p>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/devcolyer">LinkedIn</a></li>
+            <li><a href="https://github.com/DevColyer">GitHub</a></li>
+            <li><a href="https://twitter.com/DevColy">Twitter</a></li>
+            <li><a href="https://papadev.itch.io/">Itch.io</a></li>
+        </ul>
     </section>
 
     <footer>
-        <small>Copyright &#169; Sparta Global 2024 <cite>By Devin Colyer</cite></small>
+        <p>Copyright &copy; 2024 Sparta Global. All rights reserved.</p>
     </footer>
 </body>
 
