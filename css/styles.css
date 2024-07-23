@@ -13,12 +13,103 @@ h1, h2 {
     text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px #ff007f;
 }
 
-p, ul {
+p {
     background-color: #c4c4c480;
     padding: 16px;
     text-align: center;
 }
 
+/* Profile photo */
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 20px 0;
+}
+
+/* Purple background for navigation bar */
+.navbar {
+    background-color: #1e1e1e;
+    overflow: hidden;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 2px -2px gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    height: auto;
+    width: 125px;
+}
+
+.navbar .nav-container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    position: relative;
+}
+
+.navbar .nav-container::before {
+    content: '';
+    display: block;
+    width: calc(50% - 125px); /* Adjust based on half of the logo width */
+}
+
+.navbar .nav-container::after {
+    content: '';
+    display: block;
+    width: calc(50%); /* Adjust based on half of the logo width */
+}
+
+.navbar a {
+    color: #adadad;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: large;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff007f;
+}
+
+.navbar a:active {
+    color: #00fff7;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+    padding: 0 25%;
+}
+
+footer {
+    background-color: #1e1e1e;
+    color: #adadad;
+    text-align: center;
+    padding: 20px;
+    padding: 0 25%;
+}
+
+footer p {
+    margin: 0;
+    padding: 0 25%;
+}
+
+/* Neon glow effect for headers */
+h1, h2 {
+    text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px #ff007f;
+    padding: 0 25%;
+}
+
+/* Styling for Skills section */
 ul {
     list-style-type: none;
     padding: 0;
@@ -39,47 +130,31 @@ ul li:hover {
     color: #121212;
 }
 
-/* Purple background for navigation bar */
-.navbar {
-    background-color: #1e1e1e;
-    overflow: hidden;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 4px 2px -2px gray;
+/* Styling for Passions section */
+.passion-item {
+    background-color: #292929;
+    border: 1px solid #00fff7;
+    margin: 10px auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.navbar a {
-    float: center;
-    color: #adadad;
-    text-align: center;
-    padding: 14px 16px;
+.passion-item:hover {
+    background-color: #00fff7;
+    color: #121212;
+    transform: scale(1.05);
+}
+
+/* Styling for Contact section */
+#contact a {
+    color: #00fff7;
     text-decoration: none;
     font-size: large;
     transition: color 0.3s ease;
 }
 
-.navbar a:hover {
+#contact a:hover {
     color: #ff007f;
-}
-
-.navbar a:active {
-    color: #00fff7;
-}
-
-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-footer {
-    background-color: #1e1e1e;
-    color: #adadad;
-    text-align: center;
-    padding: 20px;
-}
-
-footer p {
-    margin: 0;
 }
