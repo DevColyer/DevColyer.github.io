@@ -5,12 +5,22 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
-h1, h2 {
-    font-family: 'Orbitron', sans-serif;
-    color: #ff007f;
-    text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px #ff007f;
+.content {
+    flex-grow: 1;
+    padding-left: 200px;
+    /* Adjust based on navbar width */
+    padding: 0 20%;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ffd5ea;
+    text-shadow: 0 0 10px #ff007f, 0 0 15px #ff007f, 0 0 25px #ff007f, 0 0 50px #ff007f;
 }
 
 p {
@@ -22,8 +32,10 @@ p {
 /* Profile photo */
 .profile-photo {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    border: 2px solid #ffd5ea;
+    box-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px #ff007f;
+    width: 25%;
+    height: 25%;
     object-fit: cover;
     margin: 20px 0;
 }
@@ -31,40 +43,30 @@ p {
 /* Purple background for navigation bar */
 .navbar {
     background-color: #1e1e1e;
-    overflow: hidden;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 10;
-    box-shadow: 0 4px 2px -2px gray;
+    left: 0;
+    width: auto;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+    padding-top: 20px;
+    z-index: 10;
 }
 
 .navbar .logo {
     height: auto;
     width: 125px;
+    margin-bottom: 20px;
 }
 
 .navbar .nav-container {
     display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    position: relative;
-}
-
-.navbar .nav-container::before {
-    content: '';
-    display: block;
-    width: calc(50% - 125px); /* Adjust based on half of the logo width */
-}
-
-.navbar .nav-container::after {
-    content: '';
-    display: block;
-    width: calc(50%); /* Adjust based on half of the logo width */
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 
 .navbar a {
@@ -73,6 +75,8 @@ p {
     padding: 14px 16px;
     text-decoration: none;
     font-size: large;
+    width: 100%;
+    box-sizing: border-box;
     transition: color 0.3s ease;
 }
 
@@ -85,9 +89,8 @@ p {
 }
 
 section {
-    padding: 60px 20px;
+    padding: 20px 20px;
     text-align: center;
-    padding: 0 25%;
 }
 
 footer {
@@ -95,18 +98,17 @@ footer {
     color: #adadad;
     text-align: center;
     padding: 20px;
-    padding: 0 25%;
 }
 
 footer p {
     margin: 0;
-    padding: 0 25%;
 }
 
 /* Neon glow effect for headers */
-h1, h2 {
-    text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px #ff007f;
-    padding: 0 25%;
+h1,
+h2,
+h3 {
+    text-shadow: 0 0 10px #ff007f, 0 0 15px #ff007f, 0 0 25px #ff007f, 0 0 50px #ff007f;
 }
 
 /* Styling for Skills section */
@@ -115,25 +117,73 @@ ul {
     padding: 0;
 }
 
-ul li {
-    background-color: #292929;
-    border: 1px solid #ff007f;
-    margin: 5px 0;
+.skills {
+    display: flex;
+    flex-direction: column;
+    /* Stack boxes vertically */
+    align-items: center;
+    /* Center align boxes */
+}
+
+.skill-item {
+    display: inline-block;
+    width: auto;
     padding: 10px;
-    text-align: left;
-    font-size: 18px;
+    margin: 5px 0;
+    border: 1px solid #ff007f;
+    background-color: #292929;
+    text-align: center;
     transition: background-color 0.3s ease;
 }
 
-ul li:hover {
+.skill-item:hover {
     background-color: #ff007f;
     color: #121212;
 }
 
-/* Styling for Passions section */
-.passion-item {
+.portfolio {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+.portfolio-item {
+    flex: 1;
+    min-width: 45%;
+    padding: 10px;
+    margin: 10px 0;
     background-color: #292929;
     border: 1px solid #00fff7;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.portfolio-item:hover {
+    background-color: #00fff7;
+    color: #121212;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-img {
+    height: auto;
+    width: 95%;
+    margin-bottom: 10px;
+    border: 2px solid #ffd5ea;
+    box-shadow: 0 0 2px #ff007f, 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
+}
+
+.passion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for Passions section */
+.passion-item {
+    display: inline-block;
+    background-color: #292929;
+    border: 1px solid #ff007f;
     margin: 10px auto;
     padding: 20px;
     text-align: center;
@@ -142,7 +192,7 @@ ul li:hover {
 }
 
 .passion-item:hover {
-    background-color: #00fff7;
+    background-color: #ff007f;
     color: #121212;
     transform: scale(1.05);
 }
