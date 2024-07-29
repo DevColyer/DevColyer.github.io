@@ -48,6 +48,7 @@ p {
     top: 0;
     left: 0;
     width: 7.5%; /* Use percentage for responsive width */
+    min-width: 100px; /* Set a minimum width for the navbar */
     height: 100%;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     display: flex;
@@ -56,6 +57,7 @@ p {
     padding-top: 2%;
     z-index: 10;
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 .navbar .logo {
@@ -129,10 +131,25 @@ p {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 35%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
     .navbar {
         width: 100%;
         height: auto;
         padding-top: 1%;
+    }
+    .navbar .logo {
+        width: 50%;
+        margin-bottom: 5%;
     }
 
     .navbar-toggler {
