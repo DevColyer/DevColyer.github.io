@@ -6,26 +6,27 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* Ensure content container is centered and has proper margins */
 .content {
     flex-grow: 1;
-    padding-left: 200px;
-    /* Adjust based on navbar width */
-    padding: 0 20%;
+    padding: 0 5%; /* Use percentage to ensure responsiveness */
 }
 
-h1,
-h2,
-h3 {
+/* Headings */
+h1, h2, h3 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #ffd5ea;
     text-shadow: 0 0 10px #ff007f, 0 0 15px #ff007f, 0 0 25px #ff007f, 0 0 50px #ff007f;
 }
 
+/* Paragraphs */
 p {
     background-color: #c4c4c480;
-    padding: 16px;
+    padding: 2%; /* Use percentage for padding */
     text-align: center;
 }
 
@@ -34,37 +35,38 @@ p {
     border-radius: 50%;
     border: 2px solid #ffd5ea;
     box-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px #ff007f;
-    width: 25%;
-    height: 25%;
+    width: 25vw; /* Use viewport width */
+    height: 25vw;
     object-fit: cover;
-    margin: 20px 0;
+    margin: 2% 0;
 }
 
+/* Navbar */
 .navbar {
     background-color: #1e1e1e;
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px;
+    width: 7.5%; /* Use percentage for responsive width */
     height: 100%;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 2%;
     z-index: 10;
     transition: all 0.3s ease;
 }
 
 .navbar .logo {
-    width: 125px;
-    margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 5%;
 }
 
 /* Toggler Styles */
 .navbar-toggler {
     display: none;
-    margin-bottom: 10px;
+    margin-bottom: 2%;
     border: none;
     background: transparent;
     cursor: pointer;
@@ -109,9 +111,9 @@ p {
 .nav-container a {
     color: #adadad;
     text-align: center;
-    padding: 14px 16px;
+    padding: 2% 4%; /* Use percentage for padding */
     text-decoration: none;
-    font-size: large;
+    font-size: 1.2rem; /* Use relative units for font size */
     width: 100%;
     box-sizing: border-box;
     transition: color 0.3s ease;
@@ -128,8 +130,9 @@ p {
 /* Responsive Styles */
 @media (max-width: 768px) {
     .navbar {
-        width: 100%;
+        width: 50%;
         height: auto;
+        padding-top: 1%;
     }
 
     .navbar-toggler {
@@ -149,14 +152,14 @@ p {
     }
 
     .nav-container a {
-        padding-left: 20px;
+        padding-left: 5%;
         text-align: left;
         width: 100%;
     }
 }
 
 section {
-    padding: 20px 20px;
+    padding: 0% 15%; /* Use percentage for padding */
     text-align: center;
 }
 
@@ -164,7 +167,7 @@ footer {
     background-color: #1e1e1e;
     color: #adadad;
     text-align: center;
-    padding: 20px;
+    padding: 2%; /* Use percentage for padding */
 }
 
 footer p {
@@ -172,9 +175,7 @@ footer p {
 }
 
 /* Neon glow effect for headers */
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     text-shadow: 0 0 10px #ff007f, 0 0 15px #ff007f, 0 0 25px #ff007f, 0 0 50px #ff007f;
 }
 
@@ -187,16 +188,14 @@ ul {
 .skills {
     display: flex;
     flex-direction: column;
-    /* Stack boxes vertically */
     align-items: center;
-    /* Center align boxes */
 }
 
 .skill-item {
     display: inline-block;
     width: auto;
-    padding: 10px;
-    margin: 5px 0;
+    padding: 2%; /* Use percentage for padding */
+    margin: 1% 0;
     border: 1px solid #ff007f;
     background-color: #292929;
     text-align: center;
@@ -212,14 +211,14 @@ ul {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 5%;
+    gap: 5%; /* Use percentage for gap */
 }
 
 .portfolio-item {
     flex: 1;
     min-width: 45%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 2%; /* Use percentage for padding */
+    margin: 2% 0;
     background-color: #292929;
     border: 1px solid #00fff7;
     text-align: center;
@@ -235,7 +234,7 @@ ul {
 .portfolio-img {
     height: auto;
     width: 95%;
-    margin-bottom: 10px;
+    margin-bottom: 2%; /* Use percentage for margin */
     border: 2px solid #ffd5ea;
     box-shadow: 0 0 2px #ff007f, 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
 }
@@ -251,10 +250,10 @@ ul {
     display: inline-block;
     background-color: #292929;
     border: 1px solid #ff007f;
-    margin: 10px auto;
-    padding: 20px;
+    margin: 2% auto;
+    padding: 5%;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.2rem; /* Use relative units for font size */
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -268,7 +267,7 @@ ul {
 #contact a {
     color: #00fff7;
     text-decoration: none;
-    font-size: large;
+    font-size: 1.2rem; /* Use relative units for font size */
     transition: color 0.3s ease;
 }
 
