@@ -40,13 +40,12 @@ p {
     margin: 20px 0;
 }
 
-/* Purple background for navigation bar */
 .navbar {
     background-color: #1e1e1e;
     position: fixed;
     top: 0;
     left: 0;
-    width: auto;
+    width: 250px;
     height: 100%;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     display: flex;
@@ -54,22 +53,60 @@ p {
     align-items: center;
     padding-top: 20px;
     z-index: 10;
+    transition: all 0.3s ease;
 }
 
 .navbar .logo {
-    height: auto;
     width: 125px;
     margin-bottom: 20px;
 }
 
-.navbar .nav-container {
+/* Toggler Styles */
+.navbar-toggler {
+    display: none;
+    margin-bottom: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background-color: #adadad;
+    position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background-color: #adadad;
+    position: absolute;
+    left: 0;
+}
+
+.navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler-icon::after {
+    top: 8px;
+}
+
+/* Navigation Links */
+.nav-container {
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
+    padding: 0;
+    margin: 0;
 }
 
-.navbar a {
+.nav-container a {
     color: #adadad;
     text-align: center;
     padding: 14px 16px;
@@ -80,12 +117,42 @@ p {
     transition: color 0.3s ease;
 }
 
-.navbar a:hover {
+.nav-container a:hover {
     color: #ff007f;
 }
 
-.navbar a:active {
+.nav-container a:active {
     color: #00fff7;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        height: auto;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .nav-container {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #1e1e1e;
+        width: 100%;
+    }
+
+    .nav-container.show {
+        display: flex; /* Show the nav when toggled */
+    }
+
+    .nav-container a {
+        padding-left: 20px;
+        text-align: left;
+        width: 100%;
+    }
 }
 
 section {
