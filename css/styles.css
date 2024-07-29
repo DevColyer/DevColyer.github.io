@@ -130,7 +130,7 @@ p {
 /* Responsive Styles */
 @media (max-width: 768px) {
     .navbar {
-        width: 50%;
+        width: 100%;
         height: auto;
         padding-top: 1%;
     }
