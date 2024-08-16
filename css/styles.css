@@ -1,50 +1,71 @@
 /* General Body Styles */
 body {
-    background-color: #121212; /* Deep black background */
-    color: #e0e0e0; /* Light gray text for readability */
-    font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+    background-color: #121212;
+    /* Deep black background */
+    color: #e0e0e0;
+    /* Light gray text for readability */
+    font-family: 'Arial', sans-serif;
+    /* Clean sans-serif font */
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin-left: 150px; /* Offset for the sidebar on desktop */
+    margin-left: 150px;
+    /* Offset for the sidebar on desktop */
+}
+
+h1 {
+    font-size: xx-large;
 }
 
 /* Headings */
-h1, h2, h3 {
-    font-family: 'Bebas Neue', sans-serif; /* Bold and striking font */
-    color: #c8102e; /* Dark red accent */
-    text-shadow: 0 0 10px rgba(200, 16, 46, 0.7); /* Glowing effect */
+h1,
+h2,
+h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    /* Bold and striking font */
+    color: #c8102e;
+    /* Dark red accent */
+    text-shadow: 0 0 10px rgba(200, 16, 46, 0.7);
+    /* Glowing effect */
 }
 
 /* Navbar Styling */
 .navbar {
-    background-color: #1e1e1e; /* Darker background for a goth vibe */
+    background-color: #1e1e1e;
+    /* Darker background for a goth vibe */
     position: fixed;
     top: 0;
     left: 0;
-    width: 150px; /* Fixed width for desktop */
-    height: 100%; /* Full height for desktop */
+    width: 150px;
+    /* Fixed width for desktop */
+    height: 100%;
+    /* Full height for desktop */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
-    padding: 20px; /* Padding around the content */
+    padding: 20px;
+    /* Padding around the content */
     z-index: 10;
     transition: all 0.3s ease;
-    overflow-y: auto; /* Scroll if content overflows */
+    overflow-y: auto;
+    /* Scroll if content overflows */
 }
 
 /* Adjust the logo size */
 .navbar .logo {
-    width: auto; /* Fit to content */
-    max-width: 200px; /* Limit logo width */
+    width: auto;
+    /* Fit to content */
+    max-width: 200px;
+    /* Limit logo width */
     margin-bottom: 20px;
 }
 
 /* Toggler Styles */
 .navbar-toggler {
-    display: none; /* Hidden by default (on desktop) */
+    display: none;
+    /* Hidden by default (on desktop) */
 }
 
 .navbar-toggler {
@@ -54,8 +75,10 @@ h1, h2, h3 {
     cursor: pointer;
     padding: 10px;
     position: absolute;
-    top: 20px; /* Adjust top position as needed */
-    right: 20px; /* Adjust right position as needed */
+    top: 20px;
+    /* Adjust top position as needed */
+    right: 20px;
+    /* Adjust right position as needed */
     z-index: 11;
 }
 
@@ -108,27 +131,33 @@ h1, h2, h3 {
 
 .nav-container a.active {
     color: #c8102e;
-    border-left: 4px solid #c8102e; /* Highlight active link */
+    border-left: 4px solid #c8102e;
+    /* Highlight active link */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     body {
-        margin-left: 0; /* Reset margin for mobile */
+        margin-left: 0;
+        /* Reset margin for mobile */
     }
 
     .navbar {
-        width: auto; /* Fit to content on mobile */
+        width: auto;
+        /* Fit to content on mobile */
         height: 100%;
         padding: 0;
         top: 0;
-        left: -100%; /* Hide off-screen initially */
+        left: -100%;
+        /* Hide off-screen initially */
         transition: left 0.3s ease;
-        position: fixed; /* Keep it fixed on mobile */
+        position: fixed;
+        /* Keep it fixed on mobile */
     }
 
     .navbar.open {
-        left: 0; /* Slide in on open */
+        left: 0;
+        /* Slide in on open */
     }
 
     .navbar-toggler {
@@ -139,8 +168,10 @@ h1, h2, h3 {
         cursor: pointer;
         padding: 10px;
         position: fixed;
-        top: 20px; /* Keep the toggle button fixed in viewport */
-        right: 20px; /* Adjust if needed */
+        top: 20px;
+        /* Keep the toggle button fixed in viewport */
+        right: 20px;
+        /* Adjust if needed */
         z-index: 11;
     }
 
@@ -179,22 +210,30 @@ h1, h2, h3 {
 /* Adjust main content margin on PC */
 @media (min-width: 769px) {
     body {
-        margin-left: 200px; /* Offset for the sidebar on desktop */
+        margin-left: 200px;
+        /* Offset for the sidebar on desktop */
     }
 }
 
 /* Profile Photo */
 .profile-photo {
-    border-radius: 15%;
-    border: 5px solid #c8102e; /* Thicker border for a more dramatic effect */
-    box-shadow: 0 0 15px rgba(200, 16, 46, 0.9), 0 0 20px rgba(0, 0, 0, 0.7); /* Enhanced glowing effect */
-    width: 30vw; /* Adjusts the width to 30% of the viewport width */
-    max-width: 250px; /* Limits the maximum width */
-    height: auto; /* Maintains aspect ratio */
+    border-radius: 23%;
+    border: 5px solid #c8102e;
+    /* Thicker border for a more dramatic effect */
+    box-shadow: 0 0 15px rgba(200, 16, 46, 0.9), 0 0 20px rgba(0, 0, 0, 0.7);
+    /* Enhanced glowing effect */
+    width: 30vw;
+    /* Adjusts the width to 30% of the viewport width */
+    max-width: 250px;
+    /* Limits the maximum width */
+    height: auto;
+    /* Maintains aspect ratio */
     object-fit: cover;
     margin: 20px 0;
-    filter: grayscale(100%) contrast(100%); /* Grayscale with increased contrast for a gothic feel */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)); /* Dark overlay */
+    filter: saturate(65%) contrast(100%);
+    /* Grayscale with increased contrast for a gothic feel */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    /* Dark overlay */
 }
 
 /* Section Styles */
